@@ -566,9 +566,7 @@ path = HTML_DIR/"Linkdin_Jobs.html"
 # - To mine fresh LinkedIn job data AND predict salaries for
 #   each mined job -> UNCOMMENT the line below (fetch_and_save_html)
 # - To SKIP mining and just train/evaluate the model on existing
-#   cleaned data -> KEEP the line below COMMENTED OUT
 # ============================================================
-# fetch_and_save_html(url, path)
 
 
 
