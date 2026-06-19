@@ -557,9 +557,19 @@ def testing():
 url = "https://www.linkedin.com/jobs/search?keywords=software&location=Lahore&geoId=104112529&trk=public_jobs_jobs-search-bar_search-submit&position=1&pageNum=0"
 #url = "https://pk.indeed.com/l-lahore-jobs.html?vjk=248404bb0b795f18"
 
+# ============================================================
+# NOTE:
+# - To mine fresh LinkedIn job data AND predict salaries for
+#   each mined job -> UNCOMMENT the line below (fetch_and_save_html)
+# - To SKIP mining and just train/evaluate the model on existing
+#   cleaned data -> KEEP the line below COMMENTED OUT
+# ============================================================
+# fetch_and_save_html(url, path)
+
 
 path = HTML_DIR/"Linkdin_Jobs.html"
-fetch_and_save_html(url, path)
+#fetch_and_save_html(url, path)
+
 training()
 
 #testing()
