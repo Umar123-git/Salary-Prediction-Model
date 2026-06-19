@@ -2,7 +2,6 @@ from pathlib import Path
 import pandas as pd
 from joblib import load
 
-# Dynamic root setup to look in the folder where this script lives
 BASE_DIR = Path(__file__).resolve().parent
 
 
