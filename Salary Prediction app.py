@@ -89,9 +89,9 @@ def prediction(frame):
 
 def testing():
 
-    st.title("Salary Prediction")
+    st.title("Tech Job Salary Prediction")
 
-    title = st.text_input("Enter job title to predict salary:")
+    title = st.text_input("Enter job title to predict salary :")
 
     loc = st.text_input("Location Country:")
 
