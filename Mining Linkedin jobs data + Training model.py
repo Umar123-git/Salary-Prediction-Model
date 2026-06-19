@@ -560,10 +560,6 @@ url = "https://www.linkedin.com/jobs/search?keywords=software&location=Lahore&ge
 
 path = HTML_DIR/"Linkdin_Jobs.html"
 fetch_and_save_html(url, path)
-#extarction(path)
-#Job_Detail_Extractor()
-#cleaning()
-#merging()
 training()
 
 #testing()
