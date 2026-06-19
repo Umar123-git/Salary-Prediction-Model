@@ -258,7 +258,7 @@ def Job_Detail_Extractor():
                 writing_data_in_Excel(job)
             os.remove(HTML_DIR/"{i+1}.html")
             os.remove(HTML_DIR/"company{i+1}.html")
-            
+    cleaning()        
 
 
 def writing_data_in_Excel(job):
@@ -446,7 +446,6 @@ def prepare_features(data, numeric_features, categorical_features, reference_col
 
 def training(data=None):
 
-    cleaning()
 
     pf = pd.read_csv(CSV_DIR/'cleaned_training_data_kaggle_main2.csv', low_memory=False)
     pf = pf.dropna(subset=['salary']).copy()
@@ -557,6 +556,11 @@ def testing():
 url = "https://www.linkedin.com/jobs/search?keywords=software&location=Lahore&geoId=104112529&trk=public_jobs_jobs-search-bar_search-submit&position=1&pageNum=0"
 #url = "https://pk.indeed.com/l-lahore-jobs.html?vjk=248404bb0b795f18"
 
+path = HTML_DIR/"Linkdin_Jobs.html"
+
+
+
+
 # ============================================================
 # NOTE:
 # - To mine fresh LinkedIn job data AND predict salaries for
@@ -567,7 +571,7 @@ url = "https://www.linkedin.com/jobs/search?keywords=software&location=Lahore&ge
 # fetch_and_save_html(url, path)
 
 
-path = HTML_DIR/"Linkdin_Jobs.html"
+
 #fetch_and_save_html(url, path)
 
 training()
